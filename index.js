@@ -1,24 +1,27 @@
-const nomeDoHeroi = "Kikkyou"
-const xpDoHeroi = 9700
+let victories = 30
+let defeats = 20
 
-let nivelDoHeroi;
-
-if (xpDoHeroi <= 1000) {
-    nivelDoHeroi = "Ferro";
-} else if (xpDoHeroi > 1000 && xpDoHeroi <= 2000) {
-    nivelDoHeroi = "Bronze";
-} else if (xpDoHeroi > 2000 && xpDoHeroi <= 5000) {
-    nivelDoHeroi = "Prata";
-} else if (xpDoHeroi > 6000 && xpDoHeroi <= 7000) {
-    nivelDoHeroi = "Ouro";
-} else if (xpDoHeroi > 7000 && xpDoHeroi <= 8000) {
-    nivelDoHeroi = "Platina";
-} else if (xpDoHeroi > 8000 && xpDoHeroi <= 9000) {
-    nivelDoHeroi = "Ascendente";
-} else if (xpDoHeroi > 9000 && xpDoHeroi <= 10000) {
-    nivelDoHeroi = "Imortal";
-} else if (xpDoHeroi >= 10001) {
-    nivelDoHeroi = "Radiante"
+function calculateBalance() {
+    let balance = victories - defeats
+    return balance
 }
 
-console.log("O Herói de nome " + nomeDoHeroi + " está no nível de " + nivelDoHeroi + ".")
+let level
+
+if (victories <= 10) {
+    level = "Ferro";
+} else if (victories > 10 && victories <= 20) {
+    level = "Bronze";
+} else if (victories > 20 && victories <= 50) {
+    level = "Prata";
+} else if (victories > 50 && victories <= 80) {
+    level = "Ouro";
+} else if (victories > 80 && victories <= 90) {
+    level = "Diamante";
+} else if (victories > 90 && victories <= 100) {
+    level = "Lendário";
+} else if (victories > 100) {
+    level = "Imortal";
+}
+
+console.log("O Herói tem saldo de " + balance + " e está no nível de " + level + ".")
