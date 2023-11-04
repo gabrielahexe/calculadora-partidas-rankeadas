@@ -1,10 +1,12 @@
-let victories = 30
-let defeats = 20
+let victories = 90
+let defeats = 42
+let balance // Calcula o saldo de ranqueadas
 
 function calculateBalance() {
-    let balance = victories - defeats
-    return balance
+    balance = victories - defeats
 }
+
+calculateBalance();
 
 let level
 
@@ -24,4 +26,4 @@ if (victories <= 10) {
     level = "Imortal";
 }
 
-console.log("O Herói tem saldo de " + balance + " e está no nível de " + level + ".")
+console.log("O Herói tem saldo de " + balance + " e está no nível " + level + ".")
